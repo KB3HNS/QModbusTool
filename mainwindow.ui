@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>297</width>
+    <height>174</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QModbusTool</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/QModbusTool.ico</normaloff>:/QModbusTool.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="portEdit">
+      <property name="text">
+       <string>502</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="ipEdit">
+      <property name="text">
+       <string>127.0.0.1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Slave IP Address:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Slave Port:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="timeoutEdit">
+      <property name="text">
+       <string>3000</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Request Timeout (ms):</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>297</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <widget class="QMenu" name="menuNew">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <addaction name="actionCoils"/>
+     <addaction name="actionInputs"/>
+     <addaction name="actionInput_Registers"/>
+     <addaction name="actionHolding_Registers"/>
+     <addaction name="separator"/>
+     <addaction name="actionTrend"/>
+    </widget>
+    <addaction name="menuNew"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionConnect"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_Session"/>
+    <addaction name="actionRestore_Session"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_Register_Data"/>
+   </widget>
+   <widget class="QMenu" name="menuPoll">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Poll</string>
+    </property>
+    <addaction name="actionContinuous"/>
+    <addaction name="separator"/>
+    <addaction name="actionOnce"/>
+    <addaction name="actionRead_Metadata"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuWindow"/>
+   <addaction name="menuPoll"/>
+  </widget>
+  <action name="actionConnect">
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionCoils">
+   <property name="text">
+    <string>Coils</string>
+   </property>
+  </action>
+  <action name="actionInputs">
+   <property name="text">
+    <string>Inputs</string>
+   </property>
+  </action>
+  <action name="actionInput_Registers">
+   <property name="text">
+    <string>Input Registers</string>
+   </property>
+  </action>
+  <action name="actionHolding_Registers">
+   <property name="text">
+    <string>Holding Registers</string>
+   </property>
+  </action>
+  <action name="actionSave_Session">
+   <property name="text">
+    <string>Save Session</string>
+   </property>
+  </action>
+  <action name="actionRestore_Session">
+   <property name="text">
+    <string>Restore Session</string>
+   </property>
+  </action>
+  <action name="actionContinuous">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Continuous</string>
+   </property>
+  </action>
+  <action name="actionOnce">
+   <property name="text">
+    <string>Once</string>
+   </property>
+  </action>
+  <action name="actionRead_Metadata">
+   <property name="text">
+    <string>Read Metadata</string>
+   </property>
+  </action>
+  <action name="actionLoad_Register_Data">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Load Register Data</string>
+   </property>
+  </action>
+  <action name="actionTrend">
+   <property name="text">
+    <string>Trend</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
